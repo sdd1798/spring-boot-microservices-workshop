@@ -22,6 +22,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
+    - name: fail here
+      run: exit 0
     - name: Build with Maven
       run: cd movie-info-service && mvn clean package
     - run: mkdir staging && cp movie-info-service/target/*.jar staging
